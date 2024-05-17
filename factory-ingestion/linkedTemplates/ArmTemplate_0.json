@@ -162,6 +162,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobStorageLocation",
+						"folderPath": "customers",
 						"container": "bronze"
 					},
 					"compressionCodec": "snappy"
