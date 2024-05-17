@@ -24,7 +24,8 @@
 					"dataset": {
 						"referenceName": "AzureMySqlDatabase",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
