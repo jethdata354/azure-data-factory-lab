@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@{concat(dataset().table,'.parquet')}",
+					"type": "Expression"
+				},
 				"folderPath": {
 					"value": "@dataset().table",
 					"type": "Expression"
