@@ -1,0 +1,10 @@
+{
+	"name": "AzureKeyVaultLab",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://lab-jeth.vault.azure.net/"
+		}
+	}
+}
