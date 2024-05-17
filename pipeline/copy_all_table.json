@@ -98,7 +98,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"table": {
-											"value": "@item().Table_in_lab",
+											"value": "@item().Tables_in_lab",
 											"type": "Expression"
 										}
 									}
