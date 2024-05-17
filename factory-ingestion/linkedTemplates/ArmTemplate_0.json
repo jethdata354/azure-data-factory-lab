@@ -149,33 +149,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Cassandra')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "this is for cassandra ingestion",
-				"annotations": [],
-				"type": "Cassandra",
-				"typeProperties": {
-					"host": "[parameters('Cassandra_properties_typeProperties_host')]",
-					"port": "9042",
-					"authenticationType": "Basic",
-					"username": "[parameters('Cassandra_properties_typeProperties_username')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('Cassandra_password')]"
-					}
-				},
-				"connectVia": {
-					"referenceName": "testingestion",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/testingestion')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/Parquet')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -206,6 +179,33 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/learning_storageblob')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Cassandra')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"description": "this is for cassandra ingestion",
+				"annotations": [],
+				"type": "Cassandra",
+				"typeProperties": {
+					"host": "[parameters('Cassandra_properties_typeProperties_host')]",
+					"port": "9042",
+					"authenticationType": "Basic",
+					"username": "[parameters('Cassandra_properties_typeProperties_username')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('Cassandra_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "testingestion",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/testingestion')]"
 			]
 		},
 		{
@@ -275,7 +275,7 @@
 										"source": {
 											"type": "AzureMySqlSource",
 											"query": {
-												"value": "@{concat('SELECT * FROM ',item().Table_in_lab)}",
+												"value": "@{concat('SELECT * FROM ',item().Tables_in_lab)}",
 												"type": "Expression"
 											},
 											"queryTimeout": "02:00:00"
