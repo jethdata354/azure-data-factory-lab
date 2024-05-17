@@ -1,0 +1,91 @@
+{
+	"name": "joinPerform",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Employees",
+						"type": "DatasetReference"
+					},
+					"name": "employee"
+				},
+				{
+					"dataset": {
+						"referenceName": "Departments",
+						"type": "DatasetReference"
+					},
+					"name": "departement"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "joinresult",
+						"type": "DatasetReference"
+					},
+					"name": "SaveJoinedData"
+				}
+			],
+			"transformations": [
+				{
+					"name": "employeeXdepartment"
+				},
+				{
+					"name": "RemoveDoubleColumn",
+					"description": "Remove repeated DepartmentID "
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          EmployeeID as string,",
+				"          Name as string,",
+				"          DepartmentID as string,",
+				"          Salary as string,",
+				"          JoiningDate as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> employee",
+				"source(output(",
+				"          DepartmentID as string,",
+				"          DepartmentName as string,",
+				"          Location as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> departement",
+				"employee, departement join(employee@DepartmentID == departement@DepartmentID,",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> employeeXdepartment",
+				"employeeXdepartment select(mapColumn(",
+				"          EmployeeID,",
+				"          Name,",
+				"          Salary,",
+				"          JoiningDate,",
+				"          DepartmentID,",
+				"          DepartmentName,",
+				"          Location",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> RemoveDoubleColumn",
+				"RemoveDoubleColumn sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          EmployeeID as string,",
+				"          Name as string,",
+				"          Salary as string,",
+				"          JoiningDate as string,",
+				"          DepartmentID as string,",
+				"          DepartmentName as string,",
+				"          Location as string",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SaveJoinedData"
+			]
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"name": "testingestion",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "this runtime is for the test for Cassandra data ingestion "
+	}
+}

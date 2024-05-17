@@ -1,0 +1,55 @@
+{
+	"name": "joinresult",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "learning_storageblob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "part-00000-e7ac548b-27db-44a5-971c-43c9d5383a33-c000.csv",
+				"folderPath": "output",
+				"container": "sink"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "EmployeeID",
+				"type": "String"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Salary",
+				"type": "String"
+			},
+			{
+				"name": "JoiningDate",
+				"type": "String"
+			},
+			{
+				"name": "DepartmentID",
+				"type": "String"
+			},
+			{
+				"name": "DepartmentName",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

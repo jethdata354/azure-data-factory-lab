@@ -1,0 +1,20 @@
+{
+	"name": "Cassandra",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "this is for cassandra ingestion",
+		"annotations": [],
+		"type": "Cassandra",
+		"typeProperties": {
+			"host": "20.124.90.182",
+			"port": "9042",
+			"authenticationType": "Basic",
+			"username": "cassandra",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5MTkyNjUxOC0yOWM0LTQxMDctOTdlZi0xMjQxMmQ1YTNhMjciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "testingestion",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

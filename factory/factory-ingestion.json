@@ -1,0 +1,9 @@
+{
+	"name": "factory-ingestion",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ff951892-6b5d-46d6-9d92-ceb1acc41ee3",
+		"tenantId": "34ad51d4-567c-40c6-a7bc-de0b404dead0"
+	}
+}
