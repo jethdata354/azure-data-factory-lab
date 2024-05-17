@@ -95,7 +95,13 @@
 							"outputs": [
 								{
 									"referenceName": "Parquet",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"table": {
+											"value": "@item().Table_in_lab",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
