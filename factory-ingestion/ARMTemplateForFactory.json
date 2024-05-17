@@ -74,7 +74,7 @@
 						}
 					},
 					{
-						"name": "ForEachTable",
+						"name": "ForEach1",
 						"type": "ForEach",
 						"dependsOn": [
 							{
@@ -87,7 +87,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "@activity('ShowTables').output",
+								"value": "@activity('ShowTables').output.value",
 								"type": "Expression"
 							},
 							"activities": [
@@ -107,7 +107,7 @@
 										"source": {
 											"type": "AzureMySqlSource",
 											"query": {
-												"value": "@{concat('SELECT * FROM ', item())}",
+												"value": "@{concat('SELECT * FROM ',item().Table_in_lab)}",
 												"type": "Expression"
 											},
 											"queryTimeout": "02:00:00"
@@ -144,7 +144,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"table": {
-													"value": "@item()",
+													"value": "@item().Table_in_lab",
 													"type": "Expression"
 												}
 											}
