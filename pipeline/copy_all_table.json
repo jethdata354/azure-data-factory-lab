@@ -62,7 +62,7 @@
 								"source": {
 									"type": "AzureMySqlSource",
 									"query": {
-										"value": "@{concat('SELECT * FROM ',item().Table_in_lab)}",
+										"value": "@{concat('SELECT * FROM ',item().Tables_in_lab)}",
 										"type": "Expression"
 									},
 									"queryTimeout": "02:00:00"
