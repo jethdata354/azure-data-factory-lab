@@ -69,7 +69,8 @@
 								"referenceName": "AzureMySqlDatabase",
 								"type": "DatasetReference",
 								"parameters": {}
-							}
+							},
+							"firstRowOnly": false
 						}
 					},
 					{
@@ -86,7 +87,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "@activity('ShowTables').output.pipelineReturnValue",
+								"value": "@activity('ShowTables').output",
 								"type": "Expression"
 							},
 							"activities": [
