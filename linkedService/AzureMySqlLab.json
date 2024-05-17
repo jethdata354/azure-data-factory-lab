@@ -1,18 +1,12 @@
 {
 	"name": "AzureMySqlLab",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureMySql",
 		"typeProperties": {
-			"connectionString": "Server=learning-adf-mysql.mysql.database.azure.com;Port=3306;Database=lab;UID=jethlab;SSLMode=1;UseSystemTrustStore=0",
-			"password": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "AzureKeyVaultLab",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "mysqlPassword"
-			}
+			"connectionString": "server=learning-adf-mysql.mysql.database.azure.com;port=3306;database=lab;uid=jethlab;sslmode=1;usesystemtruststore=0",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhBOTA5M0U2LUUzRUUtNDY4RC04MjBDLTFEMUNENjA2QTM0N180ODlkZjNjMS03YWIyLTQwNjktYTQxNy05ZDQyNDkzOGI1MmMiDQp9"
 		}
 	}
 }
