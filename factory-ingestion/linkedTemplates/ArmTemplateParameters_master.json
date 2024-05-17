@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "factory-ingestion"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureMySqlLab_connectionString": {
+			"value": ""
+		},
+		"Cassandra_password": {
+			"value": ""
+		},
+		"learning_storageblob_connectionString": {
+			"value": ""
+		},
+		"AzureKeyVaultLab_properties_typeProperties_baseUrl": {
+			"value": "https://lab-jeth.vault.azure.net/"
+		},
+		"Cassandra_properties_typeProperties_host": {
+			"value": "20.124.90.182"
+		},
+		"Cassandra_properties_typeProperties_username": {
+			"value": "cassandra"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
