@@ -1,10 +1,11 @@
 {
-	"name": "copy_one_table",
+	"name": "copy_all_table",
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy customer table",
-				"type": "Copy",
+				"name": "ShowTables",
+				"description": "List all tables",
+				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -17,25 +18,14 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureMySqlSource",
+						"query": "show tables;",
 						"queryTimeout": "02:00:00"
 					},
-					"sink": {
-						"type": "ParquetSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
-						},
-						"formatSettings": {
-							"type": "ParquetWriteSettings"
-						}
-					},
-					"enableStaging": false
-				},
-				"inputs": [
-					{
+					"dataset": {
 						"referenceName": "AzureMySqlDatabase",
 						"type": "DatasetReference"
 					}
-				]
+				}
 			}
 		],
 		"annotations": []
