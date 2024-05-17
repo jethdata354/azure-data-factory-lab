@@ -46,7 +46,7 @@
 					},
 					"activities": [
 						{
-							"name": "Copy Table",
+							"name": "Copy Each Table",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
