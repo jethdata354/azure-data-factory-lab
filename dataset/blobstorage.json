@@ -2,7 +2,7 @@
 	"name": "blobstorage",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "learning_storageblob",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
