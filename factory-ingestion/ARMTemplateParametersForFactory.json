@@ -14,10 +14,10 @@
 		"Cassandra_password": {
 			"value": ""
 		},
-		"learning_storageblob_connectionString": {
+		"datalakejethlearn_accountKey": {
 			"value": ""
 		},
-		"datalakejethlearn_accountKey": {
+		"learning_storageblob_connectionString": {
 			"value": ""
 		},
 		"AzureKeyVaultLab_properties_typeProperties_baseUrl": {

@@ -19,13 +19,13 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Cassandra'"
 		},
-		"learning_storageblob_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'learning_storageblob'"
-		},
 		"datalakejethlearn_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'datalakejethlearn'"
+		},
+		"learning_storageblob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'learning_storageblob'"
 		},
 		"AzureKeyVaultLab_properties_typeProperties_baseUrl": {
 			"type": "string",
@@ -76,11 +76,11 @@
 					"AzureMySqlLab_connectionString": {
 						"value": "[parameters('AzureMySqlLab_connectionString')]"
 					},
-					"learning_storageblob_connectionString": {
-						"value": "[parameters('learning_storageblob_connectionString')]"
-					},
 					"datalakejethlearn_accountKey": {
 						"value": "[parameters('datalakejethlearn_accountKey')]"
+					},
+					"learning_storageblob_connectionString": {
+						"value": "[parameters('learning_storageblob_connectionString')]"
 					},
 					"Cassandra_password": {
 						"value": "[parameters('Cassandra_password')]"
