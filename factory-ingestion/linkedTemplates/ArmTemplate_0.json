@@ -582,14 +582,25 @@
 						}
 					},
 					{
-						"name": "ForEach1",
+						"name": "ForEachFile",
 						"type": "ForEach",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "List bronze storage",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"userProperties": [],
 						"typeProperties": {
+							"items": {
+								"value": "@activity('List bronze storage').output.value",
+								"type": "Expression"
+							},
 							"activities": [
 								{
-									"name": "Copy data1",
+									"name": "copy bronze file",
 									"type": "Copy",
 									"dependsOn": [],
 									"policy": {
