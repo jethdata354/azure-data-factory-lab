@@ -1,0 +1,21 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalakejethlearn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "customers.parquet",
+				"folderPath": "customers",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
