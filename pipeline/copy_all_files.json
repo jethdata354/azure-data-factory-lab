@@ -106,7 +106,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('List bronze storage').output.value",
+						"value": "@activity('List bronze storage').output.childItems",
 						"type": "Expression"
 					},
 					"activities": [
