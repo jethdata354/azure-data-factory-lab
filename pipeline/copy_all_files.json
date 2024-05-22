@@ -105,6 +105,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('List bronze storage').output.value",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "copy bronze file",
