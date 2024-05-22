@@ -159,7 +159,13 @@
 							"outputs": [
 								{
 									"referenceName": "datalake",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}

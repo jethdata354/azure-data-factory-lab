@@ -15,6 +15,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{concat(dataset().file,'.parquet')}",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().file",
+					"type": "Expression"
+				},
 				"fileSystem": "bronze"
 			},
 			"compressionCodec": "snappy"
