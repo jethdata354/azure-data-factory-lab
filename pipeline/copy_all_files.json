@@ -93,16 +93,21 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "ForEachFile",
 				"type": "ForEach",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "List bronze storage",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"activities": [
 						{
-							"name": "Copy data1",
+							"name": "copy bronze file",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
