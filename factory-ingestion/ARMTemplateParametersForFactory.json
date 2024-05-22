@@ -17,6 +17,9 @@
 		"learning_storageblob_connectionString": {
 			"value": ""
 		},
+		"datalakejethlearn_accountKey": {
+			"value": ""
+		},
 		"AzureKeyVaultLab_properties_typeProperties_baseUrl": {
 			"value": "https://lab-jeth.vault.azure.net/"
 		},
@@ -25,6 +28,9 @@
 		},
 		"Cassandra_properties_typeProperties_username": {
 			"value": "cassandra"
+		},
+		"datalakejethlearn_properties_typeProperties_url": {
+			"value": "https://datalakejethlearn.dfs.core.windows.net/"
 		}
 	}
 }
