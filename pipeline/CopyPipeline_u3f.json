@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_u3f",
+				"name": "SiteToADLS",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -27,8 +27,142 @@
 					"source": {
 						"type": "Office365Source",
 						"dateFilterColumn": "SnapshotDate",
-						"startTime": "2024-08-16T00:00:00.000Z",
-						"endTime": "2024-08-30T00:00:00.000Z"
+						"startTime": "2024-08-30T00:00:00.000Z",
+						"endTime": "2024-08-30T00:00:00.000Z",
+						"outputColumns": [
+							{
+								"name": "ptenant"
+							},
+							{
+								"name": "Id"
+							},
+							{
+								"name": "Url"
+							},
+							{
+								"name": "ArchiveState"
+							},
+							{
+								"name": "RootWeb"
+							},
+							{
+								"name": "WebCount"
+							},
+							{
+								"name": "StorageQuota"
+							},
+							{
+								"name": "StorageUsed"
+							},
+							{
+								"name": "StorageMetrics"
+							},
+							{
+								"name": "GroupId"
+							},
+							{
+								"name": "GeoLocation"
+							},
+							{
+								"name": "IsInRecycleBin"
+							},
+							{
+								"name": "RecycleBinItemCount"
+							},
+							{
+								"name": "RecycleBinItemSize"
+							},
+							{
+								"name": "SecondStageRecycleBinStorageUsage"
+							},
+							{
+								"name": "IsTeamsConnectedSite"
+							},
+							{
+								"name": "IsTeamsChannelSite"
+							},
+							{
+								"name": "TeamsChannelType"
+							},
+							{
+								"name": "IsCommunicationSite"
+							},
+							{
+								"name": "IsHubSite"
+							},
+							{
+								"name": "HubSiteId"
+							},
+							{
+								"name": "IsOneDrive"
+							},
+							{
+								"name": "BlockAccessFromUnmanagedDevices"
+							},
+							{
+								"name": "BlockDownloadOfAllFilesOnUnmanagedDevices"
+							},
+							{
+								"name": "BlockDownloadOfViewableFilesOnUnmanagedDevices"
+							},
+							{
+								"name": "IsExternalSharingEnabled"
+							},
+							{
+								"name": "Privacy"
+							},
+							{
+								"name": "ShareByEmailEnabled"
+							},
+							{
+								"name": "ShareByLinkEnabled"
+							},
+							{
+								"name": "SiteConnectedToPrivateGroup"
+							},
+							{
+								"name": "SensitivityLabelInfo"
+							},
+							{
+								"name": "Classification"
+							},
+							{
+								"name": "IBMode"
+							},
+							{
+								"name": "IBSegments"
+							},
+							{
+								"name": "RelatedGroupId"
+							},
+							{
+								"name": "Owner"
+							},
+							{
+								"name": "SecondaryContact"
+							},
+							{
+								"name": "ReadLocked"
+							},
+							{
+								"name": "ReadOnly"
+							},
+							{
+								"name": "CreatedTime"
+							},
+							{
+								"name": "LastSecurityModifiedDate"
+							},
+							{
+								"name": "Operation"
+							},
+							{
+								"name": "LastUserAccessDate"
+							},
+							{
+								"name": "SnapshotDate"
+							}
+						]
 					},
 					"sink": {
 						"type": "BinarySink",
