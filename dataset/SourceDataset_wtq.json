@@ -1,0 +1,15 @@
+{
+	"name": "SourceDataset_wtq",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Office365LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Office365Table",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "BasicDataSet_v0.SharePointFiles_v1"
+		}
+	}
+}
